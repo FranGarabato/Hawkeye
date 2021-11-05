@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="MobileOptimized" content="width" />
+    
+    <meta name="HandheldFriendly" content="true" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Hawkeye Project</title>
@@ -23,7 +27,7 @@
       <!--Inicio Barra de Navegacion-->
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="https://hawkeye-project.glitch.me/iniciar%20sesi%C3%B3n.html">
             <img
               src="https://cdn.glitch.com/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2FLogo_Hawkeye_Def.jpg?v=1623866782988"
               alt=""
@@ -31,6 +35,8 @@
               height="50"
             />
           </a>
+          
+      <!--Inicio de la Barra desplasable-->
           <button
             class="navbar-toggler"
             type="button"
@@ -42,19 +48,80 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+      <!--Fin de la Barra desplasable-->
+          
+      <!--Inicio de la Barra desplasable prueba-> 
+  <button 
+  class="navbar-toggler"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarText"
+  aria-controls="navbarText"
+  aria-expanded="false"
+  aria-label="Toggle navigation"        
+  onclick="abrir_menu()">
+  <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>         
 
+  
+  <div class="menu-bloqueado" style="width:200px;right:0;" id="Menuplegable">
+  <button
+  class="navbar-toggler"
+  type="button"
+  data-bs-toggle="collapse"
+  data-bs-target="#navbarText"
+  aria-controls="navbarText"
+  aria-expanded="false"
+  aria-label="Toggle navigation"
+  onclick="cerrar_menu()">Cerrar
+  </button>
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="novedades.html">Novedades</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="fotos.html">Imagenes</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="iniciar sesión.html">Iniciar Sesión</a>
+      </li>
+    </ul>
+  </div>
+  
+<script>
+function abrir_menu()
+  {
+    document.getElementById("Menuplegable").style.display = "block";
+}
+
+function cerrar_menu()
+  {
+  document.getElementById("Menuplegable").style.display = "none";
+}
+</script>  
+      <!--Fin de la Barra desplasable-->
+          
+          
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="novedades.html">Novedades</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Iniciar Sesion</a>
+                <a class="nav-link" href="fotos.html">Imagenes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="iniciar sesión.html">Iniciar Sesión</a>
               </li>
             </ul>
+            
             <span class="navbar-text">
               Hawkeye
             </span>
@@ -62,6 +129,7 @@
         </div>
       </nav>
       <!--Final Barra de Navegacion-->
+      
       <!--Inicio Header-->
       <div
         class="cover d-flex justify-content-center align-items-center flex-column"
@@ -70,11 +138,12 @@
           Hawkeye
         </h1>
         <p>
-          Mirando Hacia Nuevos Horizontes
+          Mirando más allá
         </p>
+        <form action="Info.html">
         <button class="btn btn-success">
           Conoce Mas
-        </button>
+        </button></form>
       </div>
       <!--Fin Header-->
     </header>
@@ -85,15 +154,16 @@
           <div class="col">
             <div class="card" style="width: 18rem;">
               <img
-                src="https://cdn.glitch.com/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2Fgabriele-tirelli-4XQDIRFGpEQ-unsplash.jpg?v=1623756496718"
+                src="https://cdn.glitch.me/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2FIMG_4450.JPG?v=1633524114279"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
                 <h5 class="card-title">Un Nuevo Método</h5>
                 <p class="card-text">
-                  Realiza operaciones de Agrimensura desde un nuevo nivel, con
-                  nuevos métodos más eficientes, rápidos y fáciles de usar.
+                  Utilizar el dron para operaciones contra incendios
+                  permite la realizacion de las misiones con facilidad
+                  y flexibilidad.
                 </p>
               </div>
             </div>
@@ -101,16 +171,16 @@
           <div class="col">
             <div class="card" style="width: 18rem;">
               <img
-                src="https://cdn.glitch.com/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2Flidar_urban-1024x712.png?v=1623762588592"
+                src="https://cdn.glitch.me/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2FIMG_4712.JPG?v=1633524115675"
                 class="card-img-top"
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">No solo un Drone</h5>
+                <h5 class="card-title">Sorprendentemente sencillo</h5>
                 <p class="card-text">
-                  Hawkeye no solo saca fotos aéreas, sino que trae un innovador
-                  método de relevamiento de relieve y una nueva forma de
-                  perimetrar un área.
+                  Hawkeye esta diseñado con eficacia y sencillez en mente,
+                  logrando la mayor facilidad en su uso sin sacrificar
+                  su rendimiento.
                 </p>
               </div>
             </div>
@@ -123,10 +193,11 @@
                 alt="..."
               />
               <div class="card-body">
-                <h5 class="card-title">Fácil de Transportar</h5>
+                <h5 class="card-title">Rapido y agil</h5>
                 <p class="card-text">
-                  Pequeño, pero potente, permite ser transportado con solo un
-                  maletín pequeño, en un auto, tren, bus o caminando.
+                  Hawkeye detecta indicios de incendios y los reporta
+                  inalambricamente al instante, prevenir un incendio
+                  nunca fue tan rápido y facil.
                 </p>
               </div>
             </div>
@@ -135,7 +206,19 @@
       </div>
     </section>
     <!--Fin Etiquetas-->
-    <!--NewsLetter-->
+      <div class="videoY mt-5 mb-5">
+        <div class="row">
+          <div class="col"> 
+            <div>
+       <!--Inicio video-->
+      <center>
+      <iframe width="713" height="401" src="https://www.youtube.com/embed/Zd7OBDekLGU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <center>
+      <!--Fin video-->
+          </div>
+        </div>
+      </div>
+    </div>
     <section>
       <div class="container mt-5 mb-5">
         <form action="">
@@ -144,14 +227,37 @@
             <div class="flex-fill mr-4">
               <input type="email" id="email" class="form-control" />
             </div>
-            <div class="mr-4">
               <button type="submit" class="btn btn-success">
                 Suscribirse
               </button>
-            </div>
           </div>
         </form>
       </div>
     </section>
+    <section>
+      <footer>
+        <nav class="navbar navbar-dark bg-dark">
+          <span class="navbar-text">
+            Contactenos: hawkeyeproyectimpa@gmail.com
+          </span>
+          <span class="navbar-text">        
+            <a href="https://www.instagram.com/hawkeye.project/"><img
+              src="https://cdn.glitch.me/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2Finstagram_logo_icon_181283.png?v=1633527978108"
+              alt=""
+              width=""
+              height="50"
+            /></a>@hawkeye.proyect
+            </span>
+          <span class="navbar-text">
+            ©Hawkeye-Team
+          </span>
+        </nav>
+      </footer>
+    </section>
   </body>
 </html>
+    <!--Inicio de audio-->
+<!--audio autoplay loop >
+  <source src="https://cdn.glitch.me/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2Frickroll.mp3?v=1634301179279" type="audio/mpeg">
+</audio>     
+<!--Fin de auidio-->

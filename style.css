@@ -6,7 +6,7 @@ body {
 
 .cover{
   height:600px;
-  background-image:url(https://cdn.glitch.com/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2Fmitch-nielsen-pWtNPCpvVA8-unsplash.jpg?v=1623159892884);
+  background-image:url(https://cdn.glitch.me/65e8e0c7-9708-4f59-a85b-b743fd5df6b7%2FIMG_4474.JPG?v=1633524114085);
   color:white;
   background-size: cover;
   background-position:center;
@@ -17,4 +17,31 @@ body {
 .card{
   border: 0 !important;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+
+/*Inicio del menu desplegable*/
+
+/*Fin del menu desplegable/
+
+
+/*Inicio de la viewport del celular*/
+.videoY {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+
+.videoY iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/*Fin de la viewport del celular*/
+
+footer span {
+  margin: 1cm
 }
