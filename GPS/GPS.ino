@@ -11,7 +11,8 @@ TinyGPSPlus gps;
 SoftwareSerial ss(RXPin, TXPin);
 
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(115200);
+  ss.begin(GPSBaud);
 
 }
 
