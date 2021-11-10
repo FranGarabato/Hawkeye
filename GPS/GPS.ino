@@ -4,6 +4,11 @@
 static const int RXPin = 16, TXPin = 17;
 static const uint32_t GPSBaud = 9600;
 
+// The TinyGPS++ object
+TinyGPSPlus gps;
+
+// The serial connection to the GPS device
+SoftwareSerial ss(RXPin, TXPin);
 
 void setup() {
   // put your setup code here, to run once:
