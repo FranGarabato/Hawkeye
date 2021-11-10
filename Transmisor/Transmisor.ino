@@ -53,4 +53,7 @@ void loop() {
   }
 }
 
+void displayInfo()
+{
+
 }
