@@ -30,6 +30,17 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+ uint8_t numero_canal;
+ //if ( radio.available(&numero_canal) )
+ if ( radio.available() )
+ {    
+     //Leemos los datos y los guardamos en la variable datos[]
+     radio.read(datos,sizeof(datos));
 
+  }
+ else
+ {
+     Serial.println("No hay datos de radio disponibles");
+ }
+ delay(1000);
 }
