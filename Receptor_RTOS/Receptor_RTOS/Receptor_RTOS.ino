@@ -34,6 +34,11 @@ void setup() {
     //empezamos a escuchar por el canal
   radio.startListening();
 
+  xTaskCreatePinnedToCore(Recepcion,"Task1",10000,NULL,1,&Task1,0);                         
+  delay(500); 
+
+  xTaskCreatePinnedToCore(Muestreo,"Task2",10000,NULL,1,&Task2,1);          
+    delay(500);
 }
 
 void loop() {
