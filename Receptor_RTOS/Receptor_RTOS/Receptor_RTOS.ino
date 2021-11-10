@@ -60,5 +60,12 @@ void Recepcion(){
 }
 
 void Muestreo(){
-  
+  if (datos[2] == 0)
+     {
+
+    }
+    else
+    {
+
+   }
 }
