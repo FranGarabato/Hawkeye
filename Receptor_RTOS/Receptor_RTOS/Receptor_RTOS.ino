@@ -60,12 +60,29 @@ void Recepcion(){
 }
 
 void Muestreo(){
-  if (datos[2] == 0)
+if (datos[2] == 0)
      {
-
+     //reportamos por el puerto serial los datos recibidos
+     Serial.print("Dato0= " );
+     Serial.print(datos[0]);
+     Serial.print(" m, ");
+     Serial.print("Dato1= " );
+     Serial.print(datos[1]);
+     Serial.print(" m, ");
+     Serial.print(datos[2]);
+     Serial.print(" V, ");
     }
     else
     {
-
+     //reportamos por el puerto serial los datos recibidos
+     Serial.print("Dato0= " );
+     Serial.print(datos[0]);
+     Serial.print(" m, ");
+     Serial.print("Dato1= " );
+     Serial.print(datos[1]);
+     Serial.print(" m, ");
+     Serial.print(datos[2]);
+     Serial.print(" V problemas de CO2, "); 
    }
+     delay(1000);
 }
