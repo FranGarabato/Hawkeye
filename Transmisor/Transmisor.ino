@@ -41,6 +41,16 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // This sketch displays information every time a new sentence is correctly encoded.
+  while (ss.available() > 0)
+    if (gps.encode(ss.read()))
+      displayInfo();
+
+  if (millis() > 5000 && gps.charsProcessed() < 10)
+  {
+    Serial.println(F("No GPS detected: check wiring."));
+    while(true);
+  }
+}
 
 }
