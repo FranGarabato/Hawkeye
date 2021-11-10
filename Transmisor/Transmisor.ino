@@ -31,7 +31,12 @@ TinyGPSPlus gps;
 SoftwareSerial ss(RXPin, TXPin);
 
 void setup() {
-  // put your setup code here, to run once:
+  //inicializamos el NRF24L01 
+  radio.begin();
+  Serial.begin(9600); 
+ //Abrimos un canal de escritura
+ radio.openWritingPipe(direccion);
+ ss.begin(GPSBaud);
 
 }
 
