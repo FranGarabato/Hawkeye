@@ -56,5 +56,22 @@ void loop() {
     if (gps.encode(ss.read())){
       datos[0]= gps.location.lat(), 6;
       datos[1]= gps.location.lng(), 6;
+    }
   }
+
+  void Transmision(){
+      Serial.print(F("Location: ")); 
+  if (gps.location.isValid())
+  {
+    bool ok = radio.write(datos, sizeof(datos)); 
+    Serial.print(gps.location.lat(), 6);
+    Serial.print(F(","));
+    Serial.print(gps.location.lng(), 6);
+    delay(1000);
+  }
+  else
+  {
+    Serial.print(F("INVALID"));
+  }  
+  Serial.println();
   }
