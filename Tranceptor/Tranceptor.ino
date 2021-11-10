@@ -30,4 +30,19 @@ void loop() {
 //enviamos los datos
  bool ok = radio.write(datos, sizeof(datos));
 
+//reportamos por el puerto serial los datos enviados 
+  if(ok)
+  {
+     Serial.print("Datos enviados: "); 
+     Serial.print(datos[0]); 
+     Serial.print(" , "); 
+     Serial.print(datos[1]); 
+     Serial.print(" , "); 
+     Serial.println(datos[2]); 
+  }
+  else
+  {
+     Serial.println("no se ha podido enviar");
+  }
+  delay(1000);
 }
