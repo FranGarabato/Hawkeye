@@ -55,5 +55,17 @@ void loop() {
 
 void displayInfo()
 {
+   datos[0]= gps.location.lat(), 6;
+ datos[1]= gps.location.lng(), 6;
+  if (gps.location.isValid())
+  {
+    bool ok = radio.write(datos, sizeof(datos)); 
 
+    delay(1000);
+  }
+  else
+  {
+    Serial.print(F("INVALID"));
+  }  
+  Serial.println();
 }
