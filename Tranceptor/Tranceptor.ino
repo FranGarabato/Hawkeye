@@ -10,6 +10,8 @@ byte direccion[5] ={'c','a','n','a','l'};
 //creamos el objeto radio (NRF24L01)
 RF24 radio(CE_PIN, CSN_PIN);
 
+float datos[3];
+
 void setup() {
   // put your setup code here, to run once:
 
