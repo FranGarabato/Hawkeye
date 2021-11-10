@@ -33,7 +33,13 @@ TaskHandle_t Task1;
 TaskHandle_t Task2;
 
 void setup() {
-
+   //inicializamos el NRF24L01 
+  radio.begin();
+  Serial.begin(9600); 
+ //Abrimos un canal de escritura
+ radio.openWritingPipe(direccion);
+ ss.begin(GPSBaud);
+ 
 }
 
 
