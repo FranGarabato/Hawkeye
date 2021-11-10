@@ -27,4 +27,7 @@ void loop() {
  datos[1]=millis();
  datos[2]=3.14;
 
+//enviamos los datos
+ bool ok = radio.write(datos, sizeof(datos));
+
 }
