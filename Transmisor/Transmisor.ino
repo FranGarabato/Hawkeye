@@ -14,9 +14,7 @@ byte direccion[5] ={'c','a','n','a','l'};
 RF24 radio(CE_PIN, CSN_PIN);
 
 //vector con los datos a enviar
-float datos[0];
-float datos[1];
-float datos[2];
+float datos[3];
 /*This sample sketch demonstrates the normal use of a TinyGPS++ (TinyGPSPlus) object.   
 It requires the use of SoftwareSerial, and assumes that you have a 9600-baud serial 
 GPS device hooked up on pins 8(rx) and 9(tx).*/
@@ -29,6 +27,9 @@ TinyGPSPlus gps;
 // The serial connection to the GPS device
 SoftwareSerial ss(RXPin, TXPin);
 
+int pinx = 12;
+float VOLTMQ135 = 0;
+ 
 void setup()
 {
    //inicializamos el NRF24L01 
@@ -43,6 +44,7 @@ void setup()
   Serial.println(F("by Mikal Hart"));
   Serial.println(F("Edited By www.maxphi.com"));
   Serial.println();
+  pinMode(pinx, INPUT);
 }
 
 void loop()
@@ -63,6 +65,8 @@ void loop()
 
 void displayInfo()
 {
+ VOLTMQ135 = digitalRead(pinx);
+ datos[2] = VOLTMQ135 ;
  datos[0]= gps.location.lat(), 6;
  datos[1]= gps.location.lng(), 6;
   Serial.print(F("Location: ")); 
