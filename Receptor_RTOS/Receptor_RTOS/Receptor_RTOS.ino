@@ -23,7 +23,16 @@ TaskHandle_t Task1;
 TaskHandle_t Task2;
 
 void setup() {
-  // put your setup code here, to run once:
+  //inicializamos el NRF24L01 
+  radio.begin();
+  //inicializamos el puerto serie
+  Serial.begin(9600); 
+  
+  //Abrimos el canal de Lectura
+  radio.openReadingPipe(1, direccion);
+  
+    //empezamos a escuchar por el canal
+  radio.startListening();
 
 }
 
