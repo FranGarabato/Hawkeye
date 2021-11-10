@@ -47,7 +47,16 @@ void loop() {
 }
 
 void Recepcion(){
+  if ( radio.available())
+ {    
+     //Leemos los datos y los guardamos en la variable datos[]
+     radio.read(datos,sizeof(datos));
+  }
   
+ else
+ {
+     Serial.println("No hay datos de radio disponibles");
+ }
 }
 
 void Muestreo(){
