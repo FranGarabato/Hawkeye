@@ -17,7 +17,7 @@ byte direccion[5] ={'c','a','n','a','l'};
 RF24 radio(CE_PIN, CSN_PIN);
 
 //vector para los datos recibidos
-float datos[3]
+float datos[3];
 
 void setup() {
   //inicializamos el NRF24L01 
@@ -35,6 +35,15 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  if ( radio.available())
+ {    
+     //Leemos los datos y los guardamos en la variable datos[]
+     radio.read(datos,sizeof(datos));
 
+  }
+ else
+ {
+     Serial.println("No hay datos de radio disponibles");
+ }
+ delay(1000);
 }
