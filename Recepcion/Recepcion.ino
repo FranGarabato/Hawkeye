@@ -36,7 +36,16 @@ void loop() {
  {    
      //Leemos los datos y los guardamos en la variable datos[]
      radio.read(datos,sizeof(datos));
-
+     
+     //reportamos por el puerto serial los datos recibidos
+     Serial.print("Dato0= " );
+     Serial.print(datos[0]);
+     Serial.print(" V, ");
+     Serial.print("Dato1= " );
+     Serial.print(datos[1]);
+     Serial.print(" ms, ");
+     Serial.print("Dato2= " );
+     Serial.println(datos[2]);
   }
  else
  {
