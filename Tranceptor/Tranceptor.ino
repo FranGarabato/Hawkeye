@@ -22,6 +22,9 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  //cargamos <los datos en la variable datos[]
+ datos[0]=10;
+ datos[1]=millis();
+ datos[2]=3.14;
 
 }
