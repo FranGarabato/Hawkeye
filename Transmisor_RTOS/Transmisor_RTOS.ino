@@ -39,7 +39,12 @@ void setup() {
  //Abrimos un canal de escritura
  radio.openWritingPipe(direccion);
  ss.begin(GPSBaud);
- 
+
+   xTaskCreatePinnedToCore(Lectura,"Task1",10000,NULL,1,&Task1,0);                         
+  delay(500); 
+
+  xTaskCreatePinnedToCore(Transmision,"Task2",10000,NULL,1,&Task2,1);          
+    delay(500);
 }
 
 
