@@ -28,3 +28,9 @@ void loop() {
   }
 
 }
+
+void displayInfo()
+{
+
+}
+}
