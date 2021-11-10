@@ -51,3 +51,10 @@ void setup() {
 void loop() {
   
 }
+
+  void Lectura(){
+    if (gps.encode(ss.read())){
+      datos[0]= gps.location.lat(), 6;
+      datos[1]= gps.location.lng(), 6;
+  }
+  }
