@@ -50,7 +50,7 @@ void loop() {
      Serial.print("Longitud= " );
      Serial.print(datos[1], 6);
      Serial.print(" , FUEGO!! ");
-     Serial.print(datos[2]);
+     Serial.println(datos[2]);
     }
     else
     {
@@ -61,7 +61,7 @@ void loop() {
      Serial.print("Longitud= " );
      Serial.print(datos[1], 6);
      Serial.print(" , ");
-     Serial.print(datos[2]);
+     Serial.println(datos[2]);
    }
  }
  else
