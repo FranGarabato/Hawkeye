@@ -44,26 +44,24 @@ void loop() {
      if (datos[2] == 0)
      {
      //reportamos por el puerto serial los datos recibidos
-     Serial.print("Dato0= " );
-     Serial.print(datos[0]);
-     Serial.print(" m, ");
-     Serial.print("Dato1= " );
-     Serial.print(datos[1]);
-     Serial.print(" m, ");
+     Serial.print("Latitud= " );
+     Serial.print(datos[0], 6);
+     Serial.print(" , ");
+     Serial.print("Longitud= " );
+     Serial.print(datos[1], 6);
+     Serial.print(" , FUEGO!! ");
      Serial.print(datos[2]);
-     Serial.print(" V, ");
     }
     else
     {
      //reportamos por el puerto serial los datos recibidos
-     Serial.print("Dato0= " );
-     Serial.print(datos[0]);
-     Serial.print(" m, ");
-     Serial.print("Dato1= " );
-     Serial.print(datos[1]);
-     Serial.print(" m, ");
+     Serial.print("Latitud= " );
+     Serial.print(datos[0], 6);
+     Serial.print(" , ");
+     Serial.print("Longitud= " );
+     Serial.print(datos[1], 6);
+     Serial.print(" , ");
      Serial.print(datos[2]);
-     Serial.print(" V problemas de CO2, "); 
    }
  }
  else
