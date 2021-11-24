@@ -25,3 +25,44 @@ if (btn) {
 This is a comment that can span multiple lines 
 - use comments to make your own notes!
 */
+
+
+
+
+
+
+/*
+function abrir_menu()
+  {
+    document.getElementById("Menuplegable").style.display = "block";
+}
+
+function cerrar_menu()
+  {
+  document.getElementById("Menuplegable").style.display = "none";
+}
+*/
+
+/*
+$(document).ready(main);
+
+var contador = 1;
+
+function main(){
+	$('.navbarText').click(function(){
+		// $('nav').toggle(); 
+if(contador == 1){
+			$('.navbar navbar-expand-lg navbar-dark bg-dark').animate({
+				right: '0'
+			});
+			contador = 0;
+		}
+else {
+			contador = 1;
+			$('.navbar navbar-expand-lg navbar-dark bg-dark').animate({
+				right: '-100%'
+			});
+		}
+	});
+};
+*/
