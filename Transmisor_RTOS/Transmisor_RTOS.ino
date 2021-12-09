@@ -6,7 +6,7 @@
 //Declaremos los pines CE y el CSN
 #define CE_PIN 4
 #define CSN_PIN 5
-
+int id_del_drone = 1;
 //Variable con la dirección del canal por donde se va a transmitir
 byte direccion[5] ={'c','a','n','a','l'};
 
@@ -60,6 +60,7 @@ void loop() {
   }
 
   void Transmision(){
+      Serial.print("Dron N°" + id_del_drone);
       Serial.print(F("Location: ")); 
   if (gps.location.isValid())
   {

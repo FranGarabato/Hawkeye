@@ -5,7 +5,7 @@
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
-
+int id_del_drone = 1;
 //Declaremos los pines CE y el CSN
 #define CE_PIN 4
 #define CSN_PIN 5
@@ -47,6 +47,7 @@ void loop() {
 }
 
 void Recepcion(){
+  Serial.print("Dron N°" + id_del_drone);
   if ( radio.available())
  {    
      //Leemos los datos y los guardamos en la variable datos[]
