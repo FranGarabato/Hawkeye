@@ -13,7 +13,7 @@ byte direccion[5] ={'c','a','n','a','l'};
 RF24 radio(CE_PIN, CSN_PIN);
 
 //vector para los datos recibidos
-float datos[3];
+float datos[4];
 
 void setup() {
   //inicializamos el NRF24L01 
