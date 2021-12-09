@@ -17,6 +17,7 @@ RF24 radio(CE_PIN, CSN_PIN);
 float datos[0];
 float datos[1];
 float datos[2];
+float datos[3];
 /*This sample sketch demonstrates the normal use of a TinyGPS++ (TinyGPSPlus) object.   
 It requires the use of SoftwareSerial, and assumes that you have a 9600-baud serial 
 GPS device hooked up on pins 8(rx) and 9(tx).*/
@@ -55,10 +56,11 @@ void loop() {
     if (gps.encode(ss.read())){
       datos[0]= gps.location.lat(), 6;
       datos[1]= gps.location.lng(), 6;
-    }
+      }
   }
 
   void Transmision(){
+      datos[3]= 0;
       Serial.print("Dron N°" + id_del_drone);
       Serial.print(F("Location: ")); 
   if (gps.location.isValid())

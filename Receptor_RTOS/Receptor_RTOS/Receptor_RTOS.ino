@@ -17,7 +17,7 @@ byte direccion[5] ={'c','a','n','a','l'};
 RF24 radio(CE_PIN, CSN_PIN);
 
 //vector para los datos recibidos
-float datos[3];
+float datos[4];
 
 TaskHandle_t Task1;
 TaskHandle_t Task2;
@@ -82,7 +82,7 @@ if (datos[2] == 0)
      Serial.print(datos[1]);
      Serial.print(" m, ");
      Serial.print(datos[2]);
-     Serial.print(" V problemas de CO2, "); 
+     Serial.print(" V problemas de CO2, ");
    }
      delay(1000);
 }
