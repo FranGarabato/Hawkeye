@@ -27,6 +27,8 @@ void loop() {
  datos[0]=10;
  datos[1]=millis();
  datos[2]=3.14;
+ datos[3]=1;
+
 
 //enviamos los datos
  bool ok = radio.write(datos, sizeof(datos));
@@ -40,6 +42,7 @@ void loop() {
      Serial.print(datos[1]); 
      Serial.print(" , "); 
      Serial.println(datos[2]); 
+     Serial.println(datos[3]); 
   }
   else
   {
