@@ -70,6 +70,7 @@ void loop() {
     Serial.print(gps.location.lat(), 6);
     Serial.print(F(","));
     Serial.print(gps.location.lng(), 6);
+    Serial.print(datos[3]);
     delay(1000);
   }
   else
