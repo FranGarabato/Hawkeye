@@ -1,9 +1,10 @@
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
-#include <TinyGPS++.h>
-#include <SoftwareSerial.h>
+#define PIN_12 = 12
+
 //Declaremos los pines CE y el CSN
+
 #define CE_PIN 4
 #define CSN_PIN 5
 int id_del_drone = 1;
