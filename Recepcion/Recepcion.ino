@@ -5,7 +5,7 @@
 //Declaremos los pines CE y el CSN
 #define CE_PIN 4
 #define CSN_PIN 5
- 
+int id_del_drone = 1;
 //Variable con la dirección del canal que se va a leer
 byte direccion[5] ={'c','a','n','a','l'};
 
@@ -38,6 +38,7 @@ void loop() {
      radio.read(datos,sizeof(datos));
      
      //reportamos por el puerto serial los datos recibidos
+
      Serial.print("Dato0= " );
      Serial.print(datos[0]);
      Serial.print(" V, ");
