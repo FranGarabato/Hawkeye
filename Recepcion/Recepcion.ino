@@ -38,7 +38,7 @@ void loop() {
      radio.read(datos,sizeof(datos));
      
      //reportamos por el puerto serial los datos recibidos
-      Serial.print("Dron N°"+ id_del_drone);
+     Serial.print("Dron N°"+ id_del_drone);
      Serial.print("Dato0= " );
      Serial.print(datos[0]);
      Serial.print(" V, ");
@@ -47,6 +47,13 @@ void loop() {
      Serial.print(" ms, ");
      Serial.print("Dato2= " );
      Serial.println(datos[2]);
+     if (datos[3] == 1){
+     Serial.println("Actualizando constantemente");
+     Serial.println(datos[3]);
+     }
+     else{
+     Serial.println("Fallo en la actualización"); 
+     }
   }
  else
  {
