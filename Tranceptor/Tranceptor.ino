@@ -36,6 +36,7 @@ void loop() {
 //reportamos por el puerto serial los datos enviados 
   if(ok)
   {
+     Serial.print("Dron N°" + id_del_drone);
      Serial.print("Datos enviados: "); 
      Serial.print(datos[0]); 
      Serial.print(" , "); 
