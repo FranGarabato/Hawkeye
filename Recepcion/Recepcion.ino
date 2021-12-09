@@ -38,7 +38,7 @@ void loop() {
      radio.read(datos,sizeof(datos));
      
      //reportamos por el puerto serial los datos recibidos
-
+      Serial.print("Dron N°"+ id_del_drone);
      Serial.print("Dato0= " );
      Serial.print(datos[0]);
      Serial.print(" V, ");
