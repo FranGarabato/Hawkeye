@@ -1,10 +1,10 @@
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
-#define PIN_12 = 12
-
+#include <TinyGPS++.h>
+#include <SoftwareSerial.h>
 //Declaremos los pines CE y el CSN
-
+#define PIN_12 = 12
 #define CE_PIN 4
 #define CSN_PIN 5
 int id_del_drone = 1;
@@ -61,7 +61,7 @@ void loop() {
   }
 
   void Transmision(){
-      datos[3]= 0;
+      datos[3]= digitalRead(PIN_12);
       Serial.print("Dron N°" + id_del_drone);
       Serial.print(F("Location: ")); 
   if (gps.location.isValid())
