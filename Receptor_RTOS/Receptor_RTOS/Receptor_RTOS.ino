@@ -5,7 +5,8 @@
 #include <SPI.h>
 #include <nRF24L01.h>
 #include <RF24.h>
-
+int id_del_drone = 1;
+#define PIN_12 = 12
 //Declaremos los pines CE y el CSN
 #define CE_PIN 4
 #define CSN_PIN 5
@@ -17,7 +18,7 @@ byte direccion[5] ={'c','a','n','a','l'};
 RF24 radio(CE_PIN, CSN_PIN);
 
 //vector para los datos recibidos
-float datos[3];
+float datos[4];
 
 TaskHandle_t Task1;
 TaskHandle_t Task2;
@@ -43,10 +44,10 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-
 }
 
 void Recepcion(){
+  Serial.print("Dron N°" + id_del_drone);
   if ( radio.available())
  {    
      //Leemos los datos y los guardamos en la variable datos[]
@@ -60,7 +61,7 @@ void Recepcion(){
 }
 
 void Muestreo(){
-if (datos[2] == 0)
+if (datos[2] == 0 && (datos[3] >=0))
      {
      //reportamos por el puerto serial los datos recibidos
      Serial.print("Dato0= " );
@@ -71,6 +72,20 @@ if (datos[2] == 0)
      Serial.print(" m, ");
      Serial.print(datos[2]);
      Serial.print(" V, ");
+     Serial.print(datos[3]);
+     Serial.print(" V, ");
+    }
+    else if(datos[2] == 0){
+     Serial.print("Dato0= " );
+     Serial.print(datos[0]);
+     Serial.print(" m, ");
+     Serial.print("Dato1= " );
+     Serial.print(datos[1]);
+     Serial.print(" m, ");
+     Serial.print(datos[2]);
+     Serial.print(" V , ");
+     Serial.print(datos[3]);
+     Serial.print(" V problemas de HUMO, ");
     }
     else
     {
@@ -82,7 +97,9 @@ if (datos[2] == 0)
      Serial.print(datos[1]);
      Serial.print(" m, ");
      Serial.print(datos[2]);
-     Serial.print(" V problemas de CO2, "); 
+     Serial.print(" V problemas de CO2, ");
+     Serial.print(datos[3]);
+     Serial.print(" V, ");
    }
      delay(1000);
 }

@@ -4,9 +4,10 @@
 #include <TinyGPS++.h>
 #include <SoftwareSerial.h>
 //Declaremos los pines CE y el CSN
+#define PIN_12 = 12
 #define CE_PIN 4
 #define CSN_PIN 5
-
+int id_del_drone = 1;
 //Variable con la dirección del canal por donde se va a transmitir
 byte direccion[5] ={'c','a','n','a','l'};
 
@@ -17,6 +18,7 @@ RF24 radio(CE_PIN, CSN_PIN);
 float datos[0];
 float datos[1];
 float datos[2];
+float datos[3];
 /*This sample sketch demonstrates the normal use of a TinyGPS++ (TinyGPSPlus) object.   
 It requires the use of SoftwareSerial, and assumes that you have a 9600-baud serial 
 GPS device hooked up on pins 8(rx) and 9(tx).*/
@@ -49,17 +51,18 @@ void setup() {
 
 
 void loop() {
-  
 }
 
   void Lectura(){
     if (gps.encode(ss.read())){
       datos[0]= gps.location.lat(), 6;
       datos[1]= gps.location.lng(), 6;
-    }
+      }
   }
 
   void Transmision(){
+      datos[3]= digitalRead(PIN_12);
+      Serial.print("Dron N°" + id_del_drone);
       Serial.print(F("Location: ")); 
   if (gps.location.isValid())
   {
@@ -67,6 +70,7 @@ void loop() {
     Serial.print(gps.location.lat(), 6);
     Serial.print(F(","));
     Serial.print(gps.location.lng(), 6);
+    Serial.print(datos[3]);
     delay(1000);
   }
   else
