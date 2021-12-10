@@ -75,7 +75,7 @@ if (datos[2] == 0 && (datos[3] >=0))
      Serial.print(datos[3]);
      Serial.print(" V, ");
     }
-    else if(datos[3] >=0){
+    else if(datos[2] == 0){
     
     }
     else
