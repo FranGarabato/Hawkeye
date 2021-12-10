@@ -6,6 +6,7 @@
 #include <nRF24L01.h>
 #include <RF24.h>
 int id_del_drone = 1;
+#define PIN_12 = 12
 //Declaremos los pines CE y el CSN
 #define CE_PIN 4
 #define CSN_PIN 5
@@ -60,7 +61,7 @@ void Recepcion(){
 }
 
 void Muestreo(){
-if (datos[2] == 0)
+if (datos[2] == 0 && (datos[3] >=0))
      {
      //reportamos por el puerto serial los datos recibidos
      Serial.print("Dato0= " );
