@@ -76,7 +76,16 @@ if (datos[2] == 0 && (datos[3] >=0))
      Serial.print(" V, ");
     }
     else if(datos[2] == 0){
-    
+     Serial.print("Dato0= " );
+     Serial.print(datos[0]);
+     Serial.print(" m, ");
+     Serial.print("Dato1= " );
+     Serial.print(datos[1]);
+     Serial.print(" m, ");
+     Serial.print(datos[2]);
+     Serial.print(" V , ");
+     Serial.print(datos[3]);
+     Serial.print(" V problemas de HUMO, ");
     }
     else
     {
@@ -89,6 +98,8 @@ if (datos[2] == 0 && (datos[3] >=0))
      Serial.print(" m, ");
      Serial.print(datos[2]);
      Serial.print(" V problemas de CO2, ");
+     Serial.print(datos[3]);
+     Serial.print(" V, ");
    }
      delay(1000);
 }
