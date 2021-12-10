@@ -5,7 +5,7 @@
 //Declaremos los pines CE y el CSN
 #define CE_PIN 4
 #define CSN_PIN 5
- 
+int id_del_drone = 1;
 //Variable con la dirección del canal que se va a leer
 byte direccion[5] ={'c','a','n','a','l'};
 
@@ -13,7 +13,7 @@ byte direccion[5] ={'c','a','n','a','l'};
 RF24 radio(CE_PIN, CSN_PIN);
 
 //vector para los datos recibidos
-float datos[3];
+float datos[4];
 
 void setup() {
   //inicializamos el NRF24L01 
@@ -38,6 +38,7 @@ void loop() {
      radio.read(datos,sizeof(datos));
      
      //reportamos por el puerto serial los datos recibidos
+     Serial.print("Dron N°"+ id_del_drone);
      Serial.print("Dato0= " );
      Serial.print(datos[0]);
      Serial.print(" V, ");
@@ -46,6 +47,13 @@ void loop() {
      Serial.print(" ms, ");
      Serial.print("Dato2= " );
      Serial.println(datos[2]);
+     if (datos[3] == 1){
+     Serial.println("Actualizando constantemente");
+     Serial.println(datos[3]);
+     }
+     else{
+     Serial.println("Fallo en la actualización"); 
+     }
   }
  else
  {
